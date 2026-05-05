@@ -3,9 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Project Page.html</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+  margin: 0;
+   min-height: 100vh;
+  background: url('https://i.ytimg.com/vi/5kfEk70f97U/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDRKWtvOWpxNwLm_R8id-dDJaRlsA') no-repeat center;
+  background-size: cover;
+ 
+}
+
+    .container {
+      max-width: 550px;
+      margin: 120px auto;
+      background-color: hsl(310, 92%, 75%);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .bum {
+      text-align: center;
+      font-size: 67px;
+      color: #221f22;
+      margin-bottom: 10px;
+    font-family: Lobster Two;
+    }
+ 
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    button {
+      padding: 12px 20px;
+      background-color: #5197e6;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #187bcd;
+    }
+  </style>
 </head>
 <body>
+
+  <div class="container">
+    <div class="bum">~Login~</div>
     
+
+ <label for="uname">~Username~</label>
+            <br>
+            <input type="text" id="uname" class="form-control" placeholder="Enter pls <3" required>
+            <br>  
+
+        <label for="pwd">~Password~</label>
+            <br>
+            <input type="password" id="pwd" class="form-control" placeholder="Enter pls <3" required>
+            <br> 
+        
+        <p id="display"></p>
+
+        <input type="button" name="button" id="loginBTN" value="Login" class="btn btn-info rounded-5" onclick="authenticate()">
+
+         <input type="reset" name="button" id="cancel" value="Cancel" class="btn btn-info rounded-5" >
+    </form>
+
+
+
+
+<script>
+        let attempt_counter = 0;
+
+        function authenticate(){
+            let username = document.getElementById("uname").value;
+            let pwd = document.getElementById("pwd").value;
+            let granted = "Welcome!!" + username + "!";
+            let denied = "too many tries....";
+
+        while (attempt_counter < 3) {
+        if (username === "QTPi_67" && pwd === "AllHAilMonikA41") {
+            alert(granted);
+            attempt_counter = 0; 
+            document.getElementById("display").innerHTML = "";
+            window.location.href = "index.html";
+
+            break; 
+        }
+
+        else {
+            attempt_counter++;
+            document.getElementById("display").innerHTML =
+                "Oh!~ That can't be right!~" + attempt_counter + " of 3 ";
+            break; 
+        }
+
+        }
+        if (attempt_counter >= 3) {
+                alert(denied);
+                document.getElementById("loginBTN").disabled = true; 
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+    
+
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html
